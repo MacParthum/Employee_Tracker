@@ -1,36 +1,29 @@
 DROP DATABASE IF EXISTS tracker;
--- Creates the "animals_db" database --
+
 CREATE DATABASE tracker;
 
-USE tracker_db;
+USE tracker;
 
 CREATE TABLE department (
-  id INTEGER(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  
-  name VARCHAR(30) NOT NULL
-
+  id INTEGER AUTO_INCREMENT NOT NULL, 
+  name VARCHAR(30) NOT NULL,
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE role (
-  id INTEGER(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-
+  id INTEGER AUTO_INCREMENT NOT NULL,
   name VARCHAR(30) NOT NULL,
-
   title BOOLEAN NOT NULL,
-
-  sal DECIMAL (6, 2),
-
-  department_id INT
+  salary DECIMAL (6, 2),
+  department_id INT,
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE employee (
- id INTEGER(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-
-  first_name VARCHAR(30) NOT NULL,
-
+ id INTEGER AUTO_INCREMENT NOT NULL,
+ first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR (30),
-
   role_id INTEGER,
-
-  manager_id INTEGER
+  manager_id INTEGER,
+  PRIMARY KEY(ID)
 );
