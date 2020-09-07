@@ -22,8 +22,8 @@ CREATE TABLE role (
 CREATE TABLE employee (
  id INTEGER AUTO_INCREMENT NOT NULL,
  first_name VARCHAR(30) NOT NULL,
-  last_name VARCHAR (30),
-  role_id INTEGER,
+ last_name VARCHAR (30),
+ role_id INTEGER,
   manager_id INTEGER,
   PRIMARY KEY(ID)
 );
@@ -39,16 +39,23 @@ VALUES
 ("Crew Leader"),
 ("Machine Operator");
 
-INSERT INTO roles (title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES
 ("Management", 100000, 1),
+("Shift Leader", 40000, 2),
+("Crew Leader", 30000, 3),
+("Machine Operator", 20000, 4);
+
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-("firstname", "lastname", 1, null),
+("Obi Wan", "Kenobi", 1, null),
+("Darth", "Vader", 1, null),
+("Cassian", "Andor", 2, 1),
+("Din", "Djarin", 1, 3),
+("Luke", "Skywalker", 4, 1);
 
 
 SELECT*FROM department;
 SELECT*FROM role;
 SELECT*FROM employee;
-
