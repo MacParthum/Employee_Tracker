@@ -6,11 +6,11 @@ USE tracker;
 
 CREATE TABLE department (
   id INTEGER AUTO_INCREMENT NOT NULL, 
-  name VARCHAR(30) NOT NULL,
+  department_name VARCHAR(30) NOT NULL,
   PRIMARY KEY(id)
 );
 
-CREATE TABLE role (
+CREATE TABLE roles (
   id INTEGER AUTO_INCREMENT NOT NULL,
   name VARCHAR(30) NOT NULL,
   title BOOLEAN NOT NULL,
@@ -27,3 +27,28 @@ CREATE TABLE employee (
   manager_id INTEGER,
   PRIMARY KEY(ID)
 );
+
+DROP TABLE department;
+DROP TABLE roles;
+DROP TABLE employee;
+
+INSERT INTO department (department_name)
+VALUES 
+("Management"),
+("Shift Leader"),
+("Crew Leader"),
+("Machine Operator");
+
+INSERT INTO roles (title, salary, department_id)
+VALUES
+("Management", 100000, 1),
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES
+("firstname", "lastname", 1, null),
+
+
+SELECT*FROM department;
+SELECT*FROM roles;
+SELECT*FROM employee;
+
