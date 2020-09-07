@@ -10,7 +10,7 @@ CREATE TABLE department (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE roles (
+CREATE TABLE role (
   id INTEGER AUTO_INCREMENT NOT NULL,
   name VARCHAR(30) NOT NULL,
   title BOOLEAN NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE employee (
 );
 
 DROP TABLE department;
-DROP TABLE roles;
+DROP TABLE role;
 DROP TABLE employee;
 
 INSERT INTO department (department_name)
@@ -49,6 +49,6 @@ VALUES
 
 
 SELECT*FROM department;
-SELECT*FROM roles;
+SELECT*FROM role;
 SELECT*FROM employee;
 
