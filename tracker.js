@@ -71,13 +71,30 @@ function beginPrompt() {
 };
 
 
-function viewEmployee() {
-    console.log("Selecting all products...\n");
-    connection.query("SELECT * FROM employee", function(err, res) {
+function viewDepartment() {
+
+    connection.query("SELECT * FROM department", function(err, res) {
       if (err) throw err;
-      // Log all results of the SELECT statement
       console.table(res);
       beginPrompt();
     });
   }
   
+
+  function viewRole() {
+
+    connection.query("SELECT * FROM role", function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      beginPrompt();
+    });
+  }
+
+  function viewEmployee() {
+
+    connection.query("SELECT * FROM employee", function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      beginPrompt();
+    });
+  }
