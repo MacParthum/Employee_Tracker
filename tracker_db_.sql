@@ -12,9 +12,8 @@ CREATE TABLE department (
 
 CREATE TABLE role (
   id INTEGER AUTO_INCREMENT NOT NULL,
-  name VARCHAR(30) NOT NULL,
-  title BOOLEAN NOT NULL,
-  salary DECIMAL (6, 2),
+  title VARCHAR(30),
+  salary DECIMAL,
   department_id INT,
   PRIMARY KEY(id)
 );
@@ -24,13 +23,11 @@ CREATE TABLE employee (
  first_name VARCHAR(30) NOT NULL,
  last_name VARCHAR (30),
  role_id INTEGER,
-  manager_id INTEGER,
+ manager_id INT,
   PRIMARY KEY(ID)
 );
 
-DROP TABLE department;
-DROP TABLE role;
-DROP TABLE employee;
+
 
 INSERT INTO department (department_name)
 VALUES 
@@ -49,8 +46,8 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-("Obi Wan", "Kenobi", 1, null),
-("Darth", "Vader", 1, null),
+("Obi Wan", "Kenobi", 1, 1),
+("Darth", "Vader", 1, 1),
 ("Cassian", "Andor", 2, 1),
 ("Din", "Djarin", 1, 3),
 ("Luke", "Skywalker", 4, 1);
@@ -59,3 +56,5 @@ VALUES
 SELECT*FROM department;
 SELECT*FROM role;
 SELECT*FROM employee;
+
+
