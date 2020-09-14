@@ -7,4 +7,5 @@ Type "node tracker" to run.
 
 
 ##  Demonstration Video
-<iframe src="https://drive.google.com/file/d/18hZfQXIAyACz4uFcHEWqhhB3igKJ_KqW/preview" width="640" height="480"></iframe>
+
+https://drive.google.com/file/d/18hZfQXIAyACz4uFcHEWqhhB3igKJ_KqW/view
