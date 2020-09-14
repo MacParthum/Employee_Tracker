@@ -46,15 +46,13 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-("Obi Wan", "Kenobi", 1, 1),
-("Darth", "Vader", 1, 1),
-("Cassian", "Andor", 2, 1),
-("Din", "Djarin", 1, 3),
-("Luke", "Skywalker", 4, 1);
+("Joe", "Rogan", 1, 1),
+("Ron", "White", 1, 3),
+("Bill", "Burr", 2, 1),
+("Nikki", "Glaser", 1, 3),
+("Simon", "Garfunkel", 4, 1);
 
 
 SELECT*FROM department;
 SELECT*FROM role;
 SELECT*FROM employee;
-
-
